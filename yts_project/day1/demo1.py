@@ -1,6 +1,6 @@
 # _*_coding:utf-8 _*_
 #@Author:YTS
-#@文件说明：随机数大于5
+#@文件说明：随机数
 import random
 '''
 代码优化：
@@ -24,7 +24,7 @@ import random
 b=0
 while b<3:
     a=int(input('请随机输入一个整数:'))
-    num = random.randint(1,3)
+    num = random.randint(1,9)
     if a==num:
         print('恭喜你猜对了随机数为：',num)
         break
