@@ -37,3 +37,4 @@ while b<3:
     b+=1
 print('游戏结束，再见')
 print('测试')
+print('练习上传')
