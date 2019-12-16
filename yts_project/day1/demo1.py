@@ -24,7 +24,7 @@ import random
 b=0
 while b<3:
     a=int(input('请随机输入一个整数:'))
-    num = random.randint(1,9)
+    num = random.randint(1,10)
     if a==num:
         print('恭喜你猜对了随机数为：',num)
         break
@@ -36,3 +36,4 @@ while b<3:
         print('猜错了随机数为：',num)
     b+=1
 print('游戏结束，再见')
+print('测试')
