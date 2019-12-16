@@ -23,19 +23,16 @@ import random
 
 b=0
 while b<3:
-    a=int(input('请随机输入一个数字:'))
-    num = random.randint(1,10)
+    a=int(input('请随机输入一个整数:'))
+    num = random.randint(1,3)
     if a==num:
-        print('猜对了')
-        print('猜对了随机数为：{}'.format(num))
+        print('恭喜你猜对了随机数为：',num)
         break
     elif a<num:
-        print('猜小了')
-        print('随机数为：',num)
+        print('老弟猜小了随机数为：', num)
     elif a>num:
-        print('猜大了')
-        print('随机数为：', num)
-
+        print('老妹猜大了随机数为：', num)
     else:
         print('猜错了随机数为：',num)
     b+=1
+print('游戏结束，再见')
