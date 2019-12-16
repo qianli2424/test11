@@ -11,7 +11,10 @@ print(name*3,'i love you')
 #一般输入都会给出提示消息，说需要输入什么样的数据，在input中直接写便可
 name2 = input('please input your name:')
 print('your name is:',name2)
-age=input('请输入你的年龄：')
+#int()方法强制转为整数
+#str()方法强制转为字符串
+#float()方法强制转为小数
+age=int(input('请输入你的年龄：'))
 print('你的年龄为：',age,'岁')
 print('你明年的年龄为：',age+1)
 fatherAge = age*2-10
