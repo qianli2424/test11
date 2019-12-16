@@ -18,6 +18,7 @@ while b <3:
     if a<num:
         print('你的数小了:',num)
     b +=1
+    ,
 
 
 # '''
