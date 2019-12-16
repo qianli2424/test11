@@ -9,6 +9,10 @@ while n<4:
     a=int(input("请输入一个数:"))
     if a==num:
         print("恭喜你猜对了,本次随机数为:{}".format(num))
+    elif a<num:
+        print("猜小了，本次随机数为：",num)
+    elif a>num:
+        print("猜大了，本次随机数为：",num)
         # break
     else:
         print("猜错了,本次随机数为:{}".format(num))
