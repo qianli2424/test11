@@ -11,11 +11,12 @@ import random
 # else:
 #     print('猜错了随机数为：',num)
 
-
-a=int(input('请随机输入一个数字:'))
-num = random.randint(1,3)
-if a==num:
-    print('猜对了')
-    print('猜对了随机数为：{}'.format(num))
-else:
-    print('猜错了随机数为：',num)
+while True:
+    a=int(input('请随机输入一个数字:'))
+    num = random.randint(1,3)
+    if a==num:
+        print('猜对了')
+        print('猜对了随机数为：{}'.format(num))
+        break
+    else:
+        print('猜错了随机数为：',num)
