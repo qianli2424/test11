@@ -5,4 +5,5 @@
 import random
 num=random.randint(1,10)
 input("请输入一个数：")
+mmm
 
