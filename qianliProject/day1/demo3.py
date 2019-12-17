@@ -3,8 +3,10 @@
 # 文件说明：if判断语句
 import random
 
-num = random.randint(1,10)  #生成随机整数
-if 3==num:                  #判断，当满足某个条件时
+numForRandom = random.randint(1,10)  #生成随机整数
+guess = input('请输入一个数：')
+
+if 3==numForRandom:                  #判断，当满足某个条件时
     print('猜对了')        #做这个事情
     print('系统生成的随机数就是3')
 else:                       #否则
