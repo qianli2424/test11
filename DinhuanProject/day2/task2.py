@@ -27,7 +27,6 @@ while x.upper()=='Y':
     if input1=='bu':
         input1='布'
 
-
 # 判断猜拳
     if (computer=='石头'and input1=='石头') or (computer=='剪刀'and input1=='剪刀') or (computer=='布'and input1=='布'):
         print('平局！电脑出拳：{},玩家出拳：{}'.format(computer,input1))
