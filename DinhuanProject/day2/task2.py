@@ -57,5 +57,3 @@ while x.upper()=='Y':
     while x.upper() !='Y' and x.upper() !='N':
         x =input('是否继续游戏，Yes or No ?')
         x =x.strip()[0]             # 去空格，取首个字母
-        print('你的总分数为:%.2f分，总共玩了：%.2f场,赢了：%.2f场,输了：%.2f场,平局：%.2f场,胜率：%.2f%%'%(lowest_mark,count,
-                        match_won,fail,tie,match_won/count*100))
