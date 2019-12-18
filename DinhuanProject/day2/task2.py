@@ -53,7 +53,7 @@ while x.upper()=='Y':
         break
 
     # 判断游戏是否继续
-    # x再次赋值， 使x可以进入子循环中
+    # x再次赋值，当x不等于y,又不等于n时， 使x可以进入子循环中
     x ='m'
     while x.upper() !='Y' and x.upper() !='N':
         x =input('是否继续游戏，Yes or No ?')
