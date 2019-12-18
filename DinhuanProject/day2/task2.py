@@ -43,9 +43,9 @@ while x.upper()=='Y':
         match_won +=1
         count +=1
 
-    print('你的总分数为：{}分，总共玩了：{}场,赢了：{}场,输了：{}场,平局：{}场,胜率：{}%'.format(lowest_mark,count,
-           match_won,fail,tie,match_won/count*100))
-
+    print('你的总分数为:%.2f分，总共玩了：%.2f场,赢了：%.2f场,输了：%.2f场,平局：%.2f场,胜率：%.2f%%' % (lowest_mark, count,
+                match_won, fail, tie,match_won / count * 100))
+    print('-------------------------------------------------------------------------------------')
     # 判断玩家分数
     if lowest_mark == 0:
         print('game over')
@@ -57,4 +57,5 @@ while x.upper()=='Y':
     while x.upper() !='Y' and x.upper() !='N':
         x =input('是否继续游戏，Yes or No ?')
         x =x.strip()[0]             # 去空格，取首个字母
-
+        print('你的总分数为:%.2f分，总共玩了：%.2f场,赢了：%.2f场,输了：%.2f场,平局：%.2f场,胜率：%.2f%%'%(lowest_mark,count,
+                        match_won,fail,tie,match_won/count*100))
