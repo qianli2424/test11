@@ -46,13 +46,14 @@ while x.upper()=='Y':
     print('你的总分数为:%.2f分，总共玩了：%.2f场,赢了：%.2f场,输了：%.2f场,平局：%.2f场,胜率：%.2f%%' % (lowest_mark, count,
                 match_won, fail, tie,match_won / count * 100))
     print('-------------------------------------------------------------------------------------')
+
     # 判断玩家分数
     if lowest_mark == 0:
         print('game over')
         break
 
-
     # 判断游戏是否继续
+    # x再次赋值， 使x可以进入子循环中
     x ='m'
     while x.upper() !='Y' and x.upper() !='N':
         x =input('是否继续游戏，Yes or No ?')
