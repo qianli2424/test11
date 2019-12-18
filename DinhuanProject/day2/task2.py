@@ -15,7 +15,7 @@ count = 0                                         # 场次
 x ='Y'
 
 
-while x.upper()=='Y':
+while x.upper()=='Y':                             # .upper() 所以字母都大写
     computer =random.choice(['石头','剪刀','布'])  # 电脑出拳
     input1 =input('玩家出拳：')                    # 玩家出拳
 
