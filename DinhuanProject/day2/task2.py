@@ -1,15 +1,7 @@
 #!/usr/din/python3
 # -*- coding:utf8 -*-
 # @Author:欢
-'''
-猜拳
-1.计算机出拳与player玩家出拳
-2.对出拳进行比较，分辨电脑赢还是玩家赢还是平局
-3.设计玩一次之后就显示是否继续游戏，输入y或Y都可继续
-4.玩的时候，你有底分5分，赢+1，输-1，平局不加分。每次游戏结束都显示你的总分数
-5.如果总分数小于0，就不能再玩了，提示game over
-6.还可以计算胜率问题
-'''
+
 import random
 
 print('------------------------猜拳----------------------')
@@ -20,12 +12,21 @@ tie = 0                                           # 平局
 match_won = 0                                     # 赢
 fail = 0                                          # 输
 count = 0                                         # 场次
-x =''
+x ='Y'
 
 
-while x !='y':
+while x.upper()=='Y':
     computer =random.choice(['石头','剪刀','布'])  # 电脑出拳
     input1 =input('玩家出拳：')                    # 玩家出拳
+
+# 赋值
+    if input1=='shitou' or input1=='shi tou':
+        input1='石头'
+    if input1=='jiandao' or input1=='jian dao':
+        input1='剪刀'
+    if input1=='bu':
+        input1='布'
+
 
 # 判断猜拳
     if (computer=='石头'and input1=='石头') or (computer=='剪刀'and input1=='剪刀') or (computer=='布'and input1=='布'):
@@ -46,26 +47,15 @@ while x !='y':
     print('你的总分数为：{}分，总共玩了：{}场,赢了：{}场,输了：{}场,平局：{}场,胜率：{}%'.format(lowest_mark,count,
            match_won,fail,tie,match_won/count*100))
 
-    x =input('是否继续游戏，输入任意键继续，y 退出')
-# 判断游戏是否继续
-    if x=='y':
-        break
-
-# 判断玩家分数
+    # 判断玩家分数
     if lowest_mark == 0:
         print('game over')
         break
 
 
-
-
-
-
-
-
-
-
-
-
-
+    # 判断游戏是否继续
+    x ='m'
+    while x.upper() !='Y' and x.upper() !='N':
+        x =input('是否继续游戏，Yes or No ?')
+        x =x.strip()[0]             # 去空格，取首个字母
 
