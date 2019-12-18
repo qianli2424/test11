@@ -1,12 +1,13 @@
 #!/usr/din/python3
 # -*- coding:utf8 -*-
 # @Author:欢
-
+#  while循环语句加if判断语句
 import random
 
 b = 1
+num = random.randint(1,10)                     # 生成随机整数
+
 while b<4:
-    num = random.randint(1,10)                     # 生成随机整数
     a = int(input('请输入一个1-10的随机整数为：'))    # 手工输入数字
 
     if a == num:                                     # 判断，当满足这个条件时，输出以下信息

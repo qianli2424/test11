@@ -5,7 +5,7 @@ import random
 
 print('#-#-#-#-#扑点球#-#-#-#-#')
 
-End_points=5
+end_points=5
 time=0
 
 while time<10:
@@ -13,17 +13,18 @@ while time<10:
     num = random.randint(1,3)
 
     if a==num:
-        End_points = End_points + 1
-        print('恭喜你扑到点球了分数加一为',End_points)
-
+        end_points = end_points+1
+        print('恭喜你扑到点球了分数加一为',end_points)
     else:
-        End_points = End_points - 1
-        print('没扑到分数-1为',End_points)
+        end_points = end_points-1
+        print('没扑到分数-1为',end_points)
+
     time+=1
 
-    if End_points<0:
+    if end_points<0:
         break
-print('您的最终得分为',End_points)
+
+print('您的最终得分为',end_points)
 print('#############')
 print('游戏结束，再见')
 print('#############')
