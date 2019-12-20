@@ -33,7 +33,7 @@ while zimu == 'Y':
         score -= 1
         print('你输了!积分数',score)
     if score == 0:
-        result = int(win / (win + lose) * 100)
+        result = int(win/(win+lose) * 100)
         print('game over!你游戏的胜率:', result, '%')
         break
     zimu='A'
