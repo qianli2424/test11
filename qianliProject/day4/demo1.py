@@ -10,16 +10,18 @@ for user in userlist:
 for x in 'abcdefg':
     print(x,end='\t')
 print()
+
 for x in [1,2,3,4,5,6,7,8]:
     print(x)
+
 range(0,9)  #产生0-9的整数序列数
 for x in range(len(userlist)):
     print(x,end='-----------')
-'''
-temp = []
-for user in userlist:
-    print(user)
-    name = user[0]
-    temp.append(name)
-print(temp)
-'''
+
+# temp = []
+# for user in userlist:
+#     print(user)
+#     name = user[0]
+#     temp.append(name)
+# print(temp)
+
