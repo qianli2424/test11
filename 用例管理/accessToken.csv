@@ -1,5 +1,0 @@
-﻿num,title,grant_type,appid,appsecret,node,expected
-1,grant_type及appid和secret正确，成功获取accessToken,client_credential,wx508a5cacbbfc1141,fa4fc7f17ddead12d7cdcd994e7d2543,$.expires_in,7200
-2,grant_type错误，报错40002,client_credenti,wx508a5cacbbfc1141,fa4fc7f17ddead12d7cdcd994e7d2543,$.errcode,40002
-3,appid错误，报错40013,client_credential,wx508a5cacbbfc11,fa4fc7f17ddead12d7cdcd994e7d2543,$.errcode,40013
-4,appsecret错误，报错40001,client_credential,wx508a5cacbbfc1141,fa4fc7f17ddead12d7cdcd994e7d2,$.errcode,40001
