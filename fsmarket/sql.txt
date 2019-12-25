@@ -1,0 +1,79 @@
+1.你使用的数据库名称及版本，数据库客户端工具的名称及版本
+2.如何登录数据库，数据库管理员用户是什么
+3.创建一个名叫cms的数据库语句
+4.查看mysql中有哪些数据库
+5.创建一个goods表，包含id（商品编号，主键）,name（商品名称）,cat_id（品类id）,price（价格）,indate（入库日期）
+6.查看goods表是否创建成功
+7.给该goods表添加一行数据
+8.查看goods表中的全部数据并按价格从低到高排序
+9.查看表中有几种品类，其品类id分别是什么
+10.删除这张表
+
+
+1.mysql  5.x			navicat  sqlyog
+2.mysql -u root -p     root
+3.create database cms ;
+4.show databases ;
+5.create table goods(id int primary key,name char(32),cat_id int,price numeric(8,2),indate date) ;
+6.desc goods ;      show tables like 'goods' ;
+7.insert into goods values(1,'tomato',101,10,'2019/12/24');
+8.select * from goods order by price Asc ;
+9.select distinct cat_id from goods ;
+10.drop table goods ;
+
+题目：goods表有商品编号id，商品名称name，商品类别cat_id，商品价格price，商品数量gnum，商品上架时间uptime等字段
+1.查询商品数量小于10的商品信息
+2.查询商品名称为所有“萝卜”的商品信息
+3.查询今天（2019/12/25）上架的商品中价格高于100元具商品数量小于100件的商品信息
+4.查询价格在100~200元之间的且商品名称不是“燕窝”的商品信息
+5.如果商品数量小于10件，请设置增加其数量50件
+6.查询商品类别是200、404、501和505的商品信息
+7.删除一年前上架的商品信息
+8.查询总计有多少件商品
+9.查询商品价格高于平均价格的商品信息
+10.查询每种商品名称的资产信息（总价），并接其总价从高到低排序
+
+
+1.select * from goods where gnum<10;
+2.select * from godds where name like '%萝卜%' ;
+3.select * from goods where uptime='2019/12/25' and price>100 and gnum<100 ;
+4.select * from goods where price between 100 and 200 and name != '燕窝' ;
+5.update goods set gnum=gnum+50 where gnum<10 ;
+6.select * from goods where cat_id in (200,404,501,505) ;
+7.delete from goods where uptime<'2018/12/25' ;
+8.select count(id) from goods ;
+9.select * from goods where price>(select avg(price) from goods) ;
+10.select id,name,price,gnum,price*gnum value from goods order by value DESC ;
+
+有订单orders表，有字段：订单号order_id，商品编号goods_id，订单金额order_price，物流编号delivery_id，快递费delivery_price，订单生成时间start_time，订单完成时间end_time
+有商品goods表，有字段：商品编号goods_id，商品名称gname，商品数量number，商品价格price，优惠价格sale_price商品上架时间uptime
+有物流delivery表，有字段：物流编号delivery_id，物流类型desc_type，物流状态order_status，到达城市arrive_city，到达时间arrive_time
+
+1.查询今天（2019/12/25）有多少个订单
+2.查询还有哪些订单未完成（end_time为空）
+3.查询快递费高于订单金额的订单有哪些
+4.查询每个商品被出售了多少份（每个商品生成了多少个订单）
+5.查询哪些商品的价格打了8折以上或优惠金额在10元以上
+6.查询每个城市收到的快递数量（物流状态结束，按城市统计）
+7.查询哪些物流是同城派送
+8.查询订单完成所花时间，并按所花时间倒序排序
+9.查询物流类型是空运的，物流状态是未完成的商品目前所在的城市
+10.按发货城市统计物流的数量，由高到低排序，只显示前3名
+
+11.查询只卖了一单或者一单都没卖的商品信息
+12.查询有订单，但没有物流的订单信息
+13.查询哪些订单免邮了，并且这些订单对应的订单编号、商品编号、商品名称、订单金额和快递费
+14.查询第1个订单完成的时间以及送达的城市
+15.查询全年的销售情况（订单总金额）
+
+
+
+
+
+
+
+
+
+
+
+
